@@ -80,7 +80,13 @@
             event.preventDefault();
 
             $.ajax({
-                url : '<?php echo base_url('my_controller/create'); ?>'
+                url : '<?php echo base_url('my_controller/create'); ?>',
+                data : $('#createForm').serialize(),
+                type : 'post',
+                dataType : 'json',
+                success: function(data){
+                    
+                }
             });
         });
     </script>

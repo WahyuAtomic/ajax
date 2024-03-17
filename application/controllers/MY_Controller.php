@@ -11,6 +11,12 @@ parent::__construct();
     }
 
     public function create(){
-        
+        $name = $this->input->post('name');
+        $massage = $this->input->post('message');
+        $age = $this->input->post('age');
+
+        $data = array(
+
+        );
     }
 }
