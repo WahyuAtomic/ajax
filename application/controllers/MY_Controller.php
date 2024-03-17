@@ -9,4 +9,8 @@ parent::__construct();
     public function index(){
         $this->load->view('index');
     }
+
+    public function create(){
+        
+    }
 }
