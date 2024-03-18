@@ -7,7 +7,7 @@
 </head>
 <body>
 
-< class="container">
+<div class="container">
 
 <br><br>
 <!-- Button trigger modal -->
