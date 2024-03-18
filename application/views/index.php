@@ -83,9 +83,16 @@
                 url : '<?php echo base_url('my_controller/create'); ?>',
                 data : $('#createForm').serialize(),
                 type : 'post',
+                async: false,
                 dataType : 'json',
-                success: function(data){
-                    
+                success: function(response){
+                    $('#createModal').modal('hide');
+                    $('#createForm')[0].reset();
+                    alert('Successfully inserted');
+                    $('#exampleTable').DataTable().ajax.reload();
+                },
+                error: function(){
+                    alert('error');
                 }
             });
         });

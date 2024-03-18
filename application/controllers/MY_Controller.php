@@ -16,7 +16,12 @@ parent::__construct();
         $age = $this->input->post('age');
 
         $data = array(
-
+            'name' => $name,
+            'message' => $massage,
+            'age' => $age,
         );
-    }
+        $this->load->model('ajax_model');
+        $insert = $this->ajax_model->createData($data);
+        echo json_encode($insert);
+}
 }
